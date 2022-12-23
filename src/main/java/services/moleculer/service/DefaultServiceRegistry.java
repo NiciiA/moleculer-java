@@ -1106,6 +1106,7 @@ public class DefaultServiceRegistry extends ServiceRegistry implements MetricCon
 
 				Tree actionConfig = new Tree();
 				actionConfig.put("name", actionName);
+				actionConfig.put("rawName", actionName.substring(actionName.lastIndexOf('.') + 1));
 				if (Modifier.isPrivate(field.getModifiers())) {
 					actionConfig.put("visibility", "protected");
 				}
